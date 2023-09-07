@@ -31,7 +31,7 @@ poetry install
 ## How to run the API
 
 ```bash
-python bookstore_api.py
+poetry run python api/bookstore_api.py
 
 ```
 

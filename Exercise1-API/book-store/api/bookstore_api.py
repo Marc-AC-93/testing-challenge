@@ -5,11 +5,18 @@ app = Flask(__name__)
 # In-memory database
 books = []
 
+
 # Utility function to find a book by ID
-
-
 def find_book(book_id):
+    print (books)
     return next((book for book in books if book['book_id'] == book_id), None)
+
+
+# Utility function to initialize the database (add some initial books)
+def initialize_database():
+    # Add some initial books to the database
+    books.append({'book_id': '1', 'title': 'Book 1', 'author': 'Author 1', 'published_date': '2022-01-01', 'isbn': '1111111111', 'price': 19.99})
+    books.append({'book_id': '2', 'title': 'Book 2', 'author': 'Author 2', 'published_date': '2021-12-31', 'isbn': '2222222222', 'price': 29.99})
 
 
 @app.route('/books', methods=['POST'])
@@ -72,4 +79,6 @@ def delete_book(book_id):
 
 
 if __name__ == '__main__':
+    # initialize_database()
+    # print (books)
     app.run(debug=True)
