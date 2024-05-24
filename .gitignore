@@ -1,2 +1,5 @@
 .DS_Store
 .venv
+/Exercise1-API/book-store/venv/
+/Exercise1-API/.idea/
+/Resolution/node_modules/

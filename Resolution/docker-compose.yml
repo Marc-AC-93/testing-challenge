@@ -1,0 +1,15 @@
+# Version of docker compose
+version: "3.9"
+
+services:
+  playwright:
+    image: playwright-tests
+    container_name: playwright-tests
+    tty: true
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      - ./allure-results:/app/allure-results

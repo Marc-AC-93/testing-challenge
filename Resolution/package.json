@@ -1,0 +1,41 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright demo project to be used as template",
+  "main": "index.js",
+  "scripts": {
+    "docker-kill": "bash libs/commands.sh kill",
+    "docker-build": "bash libs/commands.sh build",
+    "docker-run_local": "docker exec playwright-tests npx playwright test -c src/config/local.config.ts",
+    "docker-run_stage": "docker exec playwright-tests npx playwright test -c src/config/stage.config.ts",
+    "docker-run_prod": "docker exec playwright-tests npx playwright test -c src/config/prod.config.ts",
+    "local": "npx playwright test -c src/config/local.config.ts",
+    "stage": "npx playwright test -c src/config/stage.config.ts",
+    "prod": "npx playwright test -c src/config/prod.config.ts",
+    "report_allure": "npx allure generate allure-results --clean  && npx allure open allure-report",
+    "report_playwright": "npx playwright show-report",
+    "clean": "bash libs/commands.sh clean",
+    "updatePlaywright": "npm install -D @playwright/test@latest && npx playwright install --with-deps",
+    "updateProject": "npm install && npx playwright install --with-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Marc-AC-93@github.com/Marc-AC-93/Playwright-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marc-AC-93/Playwright-template/issues"
+  },
+  "homepage": "https://github.com/Marc-AC-93/Playwright-template#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.6.5",
+    "allure-playwright": "^2.4.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "dotenv": "^16.3.1"
+  }
+}
