@@ -4,3 +4,6 @@
 /Exercise1-API/.idea/
 /Resolution/node_modules/
 /.idea/*
+/Resolution/allure-report/
+/Resolution/allure-results/
+/Resolution/playwright-report/
