@@ -6,7 +6,7 @@ test.describe("DebugBear web", ()=>{
 
     webUrls.forEach( web => {
         test(` Speed web creates the load report for '${web}' web page`, {
-                tag: ['@web']}, async ({debugBearPage}) => {
+                tag: ['@web', '@loadReport']}, async ({debugBearPage}) => {
             await debugBearPage.whenUserFillsSearchWebInputWithWeb(web)
             await debugBearPage.whenUserSelectsSearch()
             await debugBearPage.thenUserVerifiesLoadReportIsDisplayed()
@@ -17,7 +17,7 @@ test.describe("DebugBear web", ()=>{
 
     wrongInputs.forEach( data => {
         test(`Speed web notifies about an error regarding url format '${data}'`, {
-            tag: ['@web']}, async ({debugBearPage}) => {
+            tag: ['@web', '@errorNotification']}, async ({debugBearPage}) => {
             await debugBearPage.whenUserFillsSearchWebInputWithWeb(data)
             await debugBearPage.whenUserSelectsSearch()
             await debugBearPage.thenUserVerifiesNotificationError()
@@ -25,7 +25,7 @@ test.describe("DebugBear web", ()=>{
     })
 
     test(`Speed web generates the load report with failure due the web page does not exist`, {
-        tag: ['@web']}, async ({debugBearPage}) => {
+        tag: ['@web', '@errorReport']}, async ({debugBearPage}) => {
         await debugBearPage.whenUserFillsSearchWebInputWithWeb("https://en.idoven.a/")
         await debugBearPage.whenUserSelectsSearch()
         await debugBearPage.thenUserVerifiesLoadReportGeneratedWithNotFoundError()
