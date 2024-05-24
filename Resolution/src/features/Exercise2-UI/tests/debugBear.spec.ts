@@ -24,7 +24,7 @@ test.describe("DebugBear web", ()=>{
         });
     })
 
-    test.only(`Speed web generates the load report with failure due the web page does not exist`, {
+    test(`Speed web generates the load report with failure due the web page does not exist`, {
         tag: ['@web']}, async ({debugBearPage}) => {
         await debugBearPage.whenUserFillsSearchWebInputWithWeb("https://en.idoven.a/")
         await debugBearPage.whenUserSelectsSearch()
