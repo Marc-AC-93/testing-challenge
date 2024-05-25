@@ -30,7 +30,7 @@ In each request I make, I use faker-js to generate random data, and this is init
 - **Post:** I send a POST request and validate the error code and that the random fields I send in the body are in the response.
 - **Get:** First, I make a new POST request and then validate that with the GET request without using a book ID, all the requested data is in the response of all books. Then, I validate individually that the book exists by adding the book ID in the URL with the fields sent in the POST request (status codes are also validated).
 - **Update:** I make a POST request and modify the data with the PUT request, validating the status code and that the response of the update contains the new values.
-- **Delete:* I make a POST request and then a DELETE request, validating the 204 status code and that the response is empty.
+- **Delete:** I make a POST request and then a DELETE request, validating the 204 status code and that the response is empty.
 
 #### Error Conditions:
 
