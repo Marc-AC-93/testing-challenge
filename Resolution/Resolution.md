@@ -49,7 +49,7 @@ An end-to-end test that creates a book, retrieves that book, edits it, and delet
 
 - **BUG-1:** Allows long strings (fixed to create some related tests).
 - **BUG2-2:** Allows the use of dates in multiple formats; the requirement asked only for yyyy-mm-dd.
-- **BUG-3:** Negative price.
+- **BUG-3:** Negative price is allowed.
 - **BUG-4:** The price was supposed to be in float format but allows sending it as a string.
 
 ### Test result report:
