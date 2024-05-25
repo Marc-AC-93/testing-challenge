@@ -8,6 +8,8 @@ The test project is in TypeScript with Playwright as the test framework for both
 
 The entire exercise is in the Resolution folder. Let me explain the project structure:
 
+For more details about technical information, how to setup the project and launch the test cases, please read the [README.MD](README.md) file.
+
 Next, I'll explain the resolution of the two exercises:
 
 ### Exercise1-API:
@@ -50,15 +52,7 @@ An end-to-end test that creates a book, retrieves that book, edits it, and delet
 - **BUG-3:** Negative price.
 - **BUG-4:** The price was supposed to be in float format but allows sending it as a string.
 
-### Evidences:
-
-I want to add evidence of the API test execution so that you can see the execution in Docker, locally, and the report without having to install the repository.
-
-- **Test in local**
-
-[api-local.mov](evidences%2Fapi-local.mov)
-
-- **Allure report**
+### Test result report (allure):
 
 [api_tests_report.png](evidences%2Fapi_tests_report.png)
 
