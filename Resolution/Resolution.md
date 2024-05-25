@@ -28,7 +28,7 @@ In each request I make, I use faker-js to generate random data, and this is init
 #### CRUD:
 
 - **POST:** A POST request is sent, and the error code is verified. This test also checks that random fields included in the body are present in the response.
-- **GET:** POST request is executed to create new data, then the test makes two validations: one with all books for generic GET and search inside the response that new book is present, and the second get is appending the book_id into the url to verify that just the new book data is retrieved.
+- **GET:** A POST request is executed to create new data. Then, the test conducts two validations: one with all books for a generic GET request and searches inside the response to ensure that the new book is present. The second GET request involves appending the book_id to the URL to verify that only the data for the new book is retrieved.
 - **Update:** Data creation is initiated with a POST request, followed by modification using a PUT request. Both the status code and the response content are validated to ensure that the update contains the new values.
 - **Delete:** Data creation is initiated with a POST request, followed by a DELETE request. The status code is verified to ensure it is 204, indicating success, and confirmation is made that the response is empty.
 
