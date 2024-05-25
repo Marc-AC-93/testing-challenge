@@ -52,9 +52,10 @@ An end-to-end test that creates a book, retrieves that book, edits it, and delet
 - **BUG-3:** Negative price.
 - **BUG-4:** The price was supposed to be in float format but allows sending it as a string.
 
-### Test result report (allure):
+### Test result report:
 
-[api_tests_report.png](evidences%2Fapi_tests_report.png)
+- **Recording executing the tests with docker**: [Google Drive video url](https://drive.google.com/file/d/1ihHF9BdirivWyjJi2lm30zGzoYegA6SP/view?usp=sharing)
+- **Test results with allure reporter image:** [api_tests_report.png](evidences%2Fapi_tests_report.png)
 
 ### Exercise2-UI:
 
