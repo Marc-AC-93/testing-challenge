@@ -64,7 +64,8 @@ To conduct the UI exercise tests, I have devised the following scenarios:
 - **Data-driven tests:** You can pass an array of URLs where it will check the report it generates.
 - **URL with correct format but does not exist:** Input a URL and generate a report with an error message as it failed to generate the report for that website.
 - **URL with incorrect format:** Does not generate the report and returns an error notification.
-Challenges:
+
+#### Challenges:
 
 - It takes a long time to generate the report, and I had to set very long wait times to avoid test failures due to timeouts.
 - When making many requests, it blocks you and prevents you from sending more report requests with the free plan, so I couldn't upload evidence since I can't continue running the tests right now, but luckily, I managed to finish them.
