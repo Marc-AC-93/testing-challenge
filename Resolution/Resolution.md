@@ -34,7 +34,7 @@ In each request I make, I use faker-js to generate random data, and this is init
 
 #### Error Conditions:
 
-I'm going to group the errors to explain them since many share the same objective:
+I'm going to group the error conditions to explain the tests since many of them are sharing the same objective:
 
 - **POST:** Error when sending a POST without the mandatory fields.
 - **GET-PUT-DELETE:** Error when sending a GET with an incorrect book_id.
